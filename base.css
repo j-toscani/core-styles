@@ -1,0 +1,139 @@
+@import url(tailwind-preflight.css);
+
+:root,
+*::after,
+*::before {
+  font-family: sans-serif;
+  --scale: 1.43;
+  --space: 1rem;
+
+  --space-xs: calc(var(--space) * 0.5);
+  --space-sm: calc(var(--space) * 0.75);
+  --space-md: calc(var(--space) * 1);
+  --space-lg: calc(var(--space) * 1.5);
+  --space-xl: calc(var(--space) * 2);
+
+  --display-5: var(--space-md);
+  --display-4: calc(var(--display-5) * var(--scale));
+  --display-3: calc(var(--display-4) * var(--scale));
+  --display-2: calc(var(--display-3) * var(--scale));
+  --display-1: calc(var(--display-2) * var(--scale));
+
+  --primary-100: hwb(240 0% 0%);
+  --primary-200: hwb(240 20% 0%);
+  --primary-300: hwb(240 40% 0%);
+  --primary-400: hwb(240 60% 0%);
+  --primary-500: hwb(240 80% 0%);
+
+  --secondary-100: hwb(240 0% 50%);
+  --secondary-200: hwb(240 20% 50%);
+  --secondary-300: hwb(240 40% 50%);
+  --secondary-400: hwb(240 60% 50%);
+  --secondary-500: hwb(240 80% 50%);
+
+  --accent-color: var(--primary-100);
+}
+
+button {
+  display: inline-flex;
+  gap: var(--space-md);
+  background-color: var(--bg-color, white);
+  border-radius: calc(var(--display-5) / 3);
+  border-width: 1px;
+  font-size: 1rem;
+  transition: color 200ms;
+}
+
+button:hover {
+  border-color: black;
+}
+
+a,
+button {
+  padding: var(--space-sm) var(--space-md);
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+  color: var(--primary-100);
+}
+
+a:visited {
+  color: var(--primary-400);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.display-1 {
+  font-size: var(--display-1);
+}
+.display-2 {
+  font-size: var(--display-2);
+}
+.display-3 {
+  font-size: var(--display-3);
+}
+.display-4 {
+  font-size: var(--display-4);
+}
+.display-5 {
+  font-size: var(--display-5);
+}
+
+[class*="display-"] {
+  margin-top: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+.flex {
+  display: flex;
+  gap: var(--space-md);
+}
+.grid {
+  display: grid;
+  gap: var(--space-md);
+}
+
+.box {
+  padding: var(--space-md);
+}
+.box-lg {
+  padding: var(--space-xl);
+}
+
+[class*="grid-rows-"] {
+  grid-template-rows: repeat(var(--grid-rows, 1), minmax(0, 1fr));
+}
+[class*="grid-cols-"] {
+  grid-template-columns: repeat(var(--grid-columns, 1), minmax(0, 1fr));
+}
+
+.grid-cols-3 {
+  --grid-columns: 3;
+}
+
+.flex-cols {
+  flex-direction: column;
+}
+
+.center-x {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+li:not(:last-child) {
+  margin-bottom: var(--space-xs);
+}
+
+ul[role="list"] {
+  list-style: disc;
+}
+ol[role="list"] {
+  list-style: decimal;
+}
