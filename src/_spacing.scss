@@ -1,0 +1,38 @@
+:root {
+  @for $i from 1 through 20 {
+    --spacing-#{$i}: #{$i * 0.25rem};
+  }
+}
+
+@mixin spacing($prefix, $property, $value) {
+  .#{$prefix}-#{$value} {
+    #{$property}: var(--spacing-#{$value});
+  }
+  .#{$prefix}x-#{$value} {
+    #{$property}-left: var(--spacing-#{$value});
+    #{$property}-right: var(--spacing-#{$value});
+  }
+  .#{$prefix}y-#{$value} {
+    #{$property}-top: var(--spacing-#{$value});
+    #{$property}-bottom: var(--spacing-#{$value});
+  }
+  .#{$prefix}t-#{$value} {
+    #{$property}-top: var(--spacing-#{$value});
+  }
+  .#{$prefix}l-#{$value} {
+    #{$property}-left: var(--spacing-#{$value});
+  }
+  .#{$prefix}b-#{$value} {
+    #{$property}-bottom: var(--spacing-#{$value});
+  }
+  .#{$prefix}r-#{$value} {
+    #{$property}-right: var(--spacing-#{$value});
+  }
+}
+
+@for $i from 1 through 20 {
+  // Margins
+  @include spacing("m", "margin", $i);
+  // Paddings
+  @include spacing("p", "padding", $i);
+}
