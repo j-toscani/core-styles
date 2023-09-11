@@ -1,0 +1,30 @@
+@mixin gap($value) {
+  .gap-row {
+    row-gap: var(--spacing-#{$value});
+  }
+  .gap-column {
+    column-gap: var(--spacing-#{$value});
+  }
+  .gap {
+    gap: var(--spacing-#{$value});
+  }
+}
+
+.hidden {
+  display: none;
+}
+.display-unset {
+  display: unset;
+}
+
+$displays: grid, inline-grid, flex, inline-flex, block, inline-block, inline;
+
+@each $display in $displays {
+  .#{$display} {
+    display: #{$display};
+  }
+}
+
+@for $i from 1 through 20 {
+    @include gap($i)
+}
