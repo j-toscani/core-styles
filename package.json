@@ -3,12 +3,11 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite",
+    "dev": "sass --watch src/input.scss build/style.css",
     "build": "tsc && vite build",
     "preview": "vite preview"
   },
   "devDependencies": {
-    "typescript": "^4.5.4",
-    "vite": "^2.9.9"
+    "sass": "^1.66.1"
   }
 }
