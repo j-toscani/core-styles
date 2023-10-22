@@ -1,11 +1,11 @@
 @mixin gap($value) {
-  .gap-row {
+  .gap-row-#{$value} {
     row-gap: var(--spacing-#{$value});
   }
-  .gap-column {
+  .gap-column-#{$value} {
     column-gap: var(--spacing-#{$value});
   }
-  .gap {
+  .gap-#{$value} {
     gap: var(--spacing-#{$value});
   }
 }
@@ -25,6 +25,20 @@ $displays: grid, inline-grid, flex, inline-flex, block, inline-block, inline;
   }
 }
 
-@for $i from 1 through 20 {
+@for $i from 1 through 10 {
     @include gap($i)
+}
+
+@for $i from 1 through 12 {
+  .grid-columns-#{$i} {
+    grid-template-columns: repeat(#{$i}, minmax(0, 1fr));
+  }
+}
+
+.self-center {
+  place-self: center center;
+}
+
+.content-center {
+  place-content: center center;
 }
