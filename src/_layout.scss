@@ -1,44 +1,46 @@
-@mixin gap($value) {
-  .gap-row-#{$value} {
-    row-gap: var(--spacing-#{$value});
-  }
-  .gap-column-#{$value} {
-    column-gap: var(--spacing-#{$value});
-  }
-  .gap-#{$value} {
-    gap: var(--spacing-#{$value});
-  }
-}
+@layer utility {
+    @mixin gap($value) {
+        .gap-row-#{$value} {
+            row-gap: var(--spacing-#{$value});
+        }
+        .gap-column-#{$value} {
+            column-gap: var(--spacing-#{$value});
+        }
+        .gap-#{$value} {
+            gap: var(--spacing-#{$value});
+        }
+    }
 
-.hidden {
-  display: none;
-}
-.display-unset {
-  display: unset;
-}
+    .hidden {
+        display: none;
+    }
+    .display-unset {
+        display: unset;
+    }
 
-$displays: grid, inline-grid, flex, inline-flex, block, inline-block, inline;
+    $displays: grid, inline-grid, flex, inline-flex, block, inline-block, inline;
 
-@each $display in $displays {
-  .#{$display} {
-    display: #{$display};
-  }
-}
+    @each $display in $displays {
+        .#{$display} {
+            display: #{$display};
+        }
+    }
 
-@for $i from 1 through 10 {
-    @include gap($i)
-}
+    @for $i from 1 through 10 {
+        @include gap($i);
+    }
 
-@for $i from 1 through 12 {
-  .grid-columns-#{$i} {
-    grid-template-columns: repeat(#{$i}, minmax(0, 1fr));
-  }
-}
+    @for $i from 1 through 12 {
+        .grid-columns-#{$i} {
+            grid-template-columns: repeat(#{$i}, minmax(0, 1fr));
+        }
+    }
 
-.self-center {
-  place-self: center center;
-}
+    .self-center {
+        place-self: center center;
+    }
 
-.content-center {
-  place-content: center center;
+    .content-center {
+        place-content: center center;
+    }
 }

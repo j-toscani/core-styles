@@ -1,6 +1,5 @@
-@use './tailwind-preflight.css';
+@use "./layers";
+@use "./tailwind-preflight.css";
 @use "./spacing";
+@use "./default";
 @use "./layout";
-@use "./colors-hex";
-@use "./colors-rgb";
-@use "./transition";
