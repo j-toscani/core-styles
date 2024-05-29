@@ -4,10 +4,10 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "sass --watch src/input.scss build/style.css",
-    "build": "sass src/input.scss build/style.min.css --style compressed",
-    "preview": "vite preview"
+    "build": "sass src/input.scss build/style.min.css --style compressed"
   },
   "devDependencies": {
+    "hono": "^4.4.0",
     "sass": "^1.66.1"
   }
 }
