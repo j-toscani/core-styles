@@ -22,4 +22,5 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-index.html
+example/style.css
+example/style.css.map
