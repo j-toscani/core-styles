@@ -43,4 +43,17 @@
     .content-center {
         place-content: center center;
     }
+
+    .flex-row {
+        flex-direction: row;
+    }
+    .flex-column {
+        flex-direction: column;
+    }
+    .flex-row-reverse {
+        flex-direction: row-reverse;
+    }
+    .flex-column-reverse {
+        flex-direction: column-reverse;
+    }
 }

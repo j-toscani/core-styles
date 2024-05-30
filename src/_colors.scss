@@ -1,0 +1,13 @@
+@layer default {
+    :root {
+        --color-accent: blue;
+        --color-accent-contrast: white;
+
+        --color-success: green;
+        --color-fail: red;
+        --color-warn: yellow;
+        --color-info: gray;
+
+        --light-grey: lightgray;
+    }
+}

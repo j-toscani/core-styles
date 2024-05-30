@@ -28,11 +28,6 @@
         @for $i from 1 through 20 {
             --spacing-#{$i}: #{$i * 0.25rem};
         }
-
-        --color-success: green;
-        --color-fail: red;
-        --color-warn: yellow;
-        --color-info: gray;
     }
 
     h1,
@@ -72,5 +67,19 @@
 
     small {
         font-size: var(--font-size-small);
+    }
+
+    a {
+        text-decoration: underline;
+    }
+}
+
+@layer utility {
+    .underline {
+        text-decoration: underline;
+    }
+
+    .uppercase {
+        text-transform: uppercase;
     }
 }

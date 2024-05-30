@@ -1,0 +1,27 @@
+@layer default {
+    input:not([type="checkbox"], [type="radio"]),
+    select {
+        padding: var(--spacing-1) var(--spacing-2);
+        border: 1px solid var(--light-grey);
+    }
+
+    input[data-no-arrows]::-webkit-outer-spin-button,
+    input[data-no-arrows]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    /* Firefox */
+    input[data-no-arrows] {
+        -moz-appearance: textfield;
+    }
+
+    button {
+        font-size: var(--font-size-base);
+        padding: var(--spacing-1) var(--spacing-2);
+        min-width: 10ch;
+        background-color: var(--color-accent);
+        color: var(--color-accent-contrast);
+        border-radius: var(--spacing-1);
+    }
+}
