@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <style>
+            body > section {
+                display: none;
+            }
+            section:target {
+                display: block;
+                padding: var(--spacing-4);
+            }
+
+            body {
+                grid-template-columns: 200px 1fr;
+            }
+        </style>
+        <title>Components</title>
+    </head>
+    <body class="grid gap-4">
+        <nav class="flex flex-column gap-4 p-4">
+            <a href="#typography"> Typography </a>
+            <a href="#inputs"> Inputs </a>
+        </nav>
+        <section id="typography">
+            <h1>I am an App</h1>
+            <h2>I am an App</h2>
+            <h3>I am an App</h3>
+            <h4>I am an App</h4>
+            <h5>I am an App</h5>
+            <h6>I am an App</h6>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Deleniti consectetur commodi dicta enim velit! Soluta voluptas
+                error, optio reiciendis enim, distinctio ipsam dolores veniam
+                provident odio esse laboriosam modi corporis?
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Deleniti consectetur commodi dicta enim velit! Soluta voluptas
+                error, optio reiciendis enim, distinctio ipsam dolores veniam
+                provident odio esse laboriosam modi corporis?
+            </p>
+            <small>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.</small
+            >
+        </section>
+        <section id="inputs">
+            <input type="text" />
+            <input type="number" />
+            <input type="number" data-no-arrows />
+            <button>Submit</button>
+        </section>
+    </body>
+</html>
